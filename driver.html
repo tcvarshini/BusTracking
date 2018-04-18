@@ -1,0 +1,137 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>NSRIT </title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Lively Chat Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script type="text/javascript">     
+    var config = {
+        apiKey: "AIzaSyCanJ2VEkIedWd4YMOChonIFrEA8W7WV1k",
+        authDomain: "myproject-c921f.firebaseapp.com",
+        databaseURL: "https://myproject-c921f.firebaseio.com",
+        projectId: "myproject-c921f",
+        storageBucket: "myproject-c921f.appspot.com",
+        messagingSenderId: "655943643823"
+    };
+    firebase.initializeApp(config);
+    function watchPosition() {
+        var qsParm = new Array();
+        var query = window.location.search.substring(1);
+        var parms = query.split('&');
+        for (var i = 0; i < parms.length; i++) {
+            var pos = parms[i].indexOf('=');
+            if (pos > 0) {
+                var key = parms[i].substring(0, pos);
+                var val = parms[i].substring(pos + 1);
+                qsParm[key] = val;
+            }
+        }
+
+        if (parms.length > 0) {
+            var UUID = qsParm["id"];
+            var deviceid = 'usermodule-465de';
+            var Rootref = firebase.database().ref().child(UUID);
+            Rootref.set({
+                USERDATA: 'Driver' + ',' + UUID
+            });
+            alert("Added");
+        }
+    }
+    </script>
+	<!--//tags -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+	    rel='stylesheet' type='text/css'>
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header" id="home">
+		<div class="top_menu_w3layouts">
+
+			<div class="header_left">
+				<ul>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i> Sontyam, Visakhapatnam</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> 08933 - 220125/220126</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="office@nsrit.edu.in">office@nsrit.edu.in</a></li>
+				</ul>
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+
+		<div class="content white">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<a class="navbar-brand" href="index.html">
+							<h1><img style="height: 31px;width: 158px;" src="images/download.jpg" /><label>Tracking System</label></h1>
+						</a>
+					</div>
+					<!--/.navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav>
+							<ul class="nav navbar-nav">
+								<li><a href="AdminHome.aspx" class="active"><i class="fa fa-home"></i> Home</a></li>
+								<li><a href="AddStudents.aspx"><i class="fa fa-user"></i>Students</a></li>
+                                <li><a href="AddDriver.aspx"><i class="fa fa-wheelchair"></i>Driver</a></li>								
+                                <li><a href="#"><i class="fa fa-map"></i>Live Tracking</a></li>
+                                <li><a href="index.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+								
+							</ul>
+						</nav>
+					</div>
+					<!--/.navbar-collapse-->
+					<!--/.navbar-->
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <br />
+    <br />
+     <br />
+    <br />
+                    <div style="height:300px;text-align:center;vertical-align:middle"> 
+                    Data Uploaded into Local server..
+                    <button id = "getPosition" style="width:30%;background-color: #008CBA;border: none;color: white;padding: 15px 32px;
+    text-align: center;text-decoration: none;display: inline-block;font-size: 16px; " onclick="watchPosition();">Add To Cloud</button>
+                    </div>
+					 
+				</div>
+	<!--//banner -->
+	<!--/icons-->
+	
+	<div class="footer_wthree_agile">
+		<p>© 2018 NSRIT. All rights reserved | Design by <a href="http://www.nsrit.edu.in/">NSRIT</a></p>
+
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>

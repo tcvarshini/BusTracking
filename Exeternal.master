@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Exeternal.master.cs" Inherits="Exeternal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NSRIT :: Live Tracking </title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="NSRIT" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//tags -->
+    
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+	    rel='stylesheet' type='text/css'>
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- header -->
+	<div class="header" id="home">
+		<div class="top_menu_w3layouts">
+
+			<div class="header_left">
+				<ul>
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i> Sontyam, Visakhapatnam</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> 08933 - 220125/220126</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="office@nsrit.edu.in">office@nsrit.edu.in</a></li>
+				</ul>
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+
+		<div class="content white">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<a class="navbar-brand" href="index.html">
+							<h1><img style="height: 31px;width: 158px;" src="images/download.jpg" /><label>Tracking System</label></h1>
+						</a>
+					</div>
+					<!--/.navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav>
+							<ul class="nav navbar-nav">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li><a href="Adminlogin.aspx">Adminstrator Login</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!--/.navbar-collapse-->
+					<!--/.navbar-->
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+		<!-- The Modal -->
+	</div>
+	<!--//banner -->
+	<!--/icons-->
+	
+	<div class="footer_wthree_agile">
+		<p>© 2018 NSRIT. All rights reserved | Design by <a href="http://www.nsrit.edu.in/">NSRIT</a></p>
+
+	</div>
+
+	<!-- //footer -->
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  
+	<script>
+	    $('ul.dropdown-menu li').hover(function () {
+	        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+	    }, function () {
+	        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+	    });
+	</script>
+	<!-- stats -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.countup.js"></script>
+	<script>
+	    $('.counter').countUp();
+	</script>
+	<!-- //stats -->
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+    
+    </form>
+</body>
+</html>
